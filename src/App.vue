@@ -23,9 +23,12 @@ import Story from "@/components/Story";
 import Skills from "@/components/Skills";
 
 export default {
-  name: 'Untie',
+  name: 'jlacki.pl',
   components: {Skills, Story, Experience, SiteHeader},
   data: () => ({}),
+  metaInfo: {
+    title: "jlacki.pl - software engineer"
+  }
 };
 </script>
 
