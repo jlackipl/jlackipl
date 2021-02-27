@@ -4,19 +4,13 @@
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
 jobs:
-  vendor:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - run: npm install
-
   build_and_preview:
     runs-on: ubuntu-latest
     needs: vendor
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: npm install
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
