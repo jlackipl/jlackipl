@@ -2,7 +2,7 @@
   <v-content fill-height fluid>
     <v-img dark style="height: 100vh;" :src="img">
       <v-row
-          style="margin-top: 50vh"
+          style="margin-top: 40vh"
           align="center"
           justify="center"
       >
@@ -17,8 +17,11 @@
             Software engineer
           </h4>
           <h4>
-            <v-btn fab>
-              <v-icon> {{ linkedIn }}</v-icon>
+            <v-btn href="https://linkedin.com/in/jlackipl" class="ma-2" target="_blank" elevation="5" icon fab>
+              <v-icon>{{ linkedIn }}</v-icon>
+            </v-btn>
+            <v-btn href="https://github.com/jlackipl" class="ma-2" target="_blank" elevation="5" icon fab>
+              <v-icon>{{ github }}</v-icon>
             </v-btn>
           </h4>
         </v-col>
@@ -29,13 +32,14 @@
 
 <script>
 import background from '@/assets/background.jpg'
-import {mdiLinkedin} from '@mdi/js';
+import {mdiGithub, mdiLinkedin} from '@mdi/js';
 
 export default {
   name: "SiteHeader",
   data: () => ({
     img: background,
-    linkedIn: mdiLinkedin
+    linkedIn: mdiLinkedin,
+    github: mdiGithub
   })
 }
 </script>
