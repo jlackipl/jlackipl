@@ -3,12 +3,13 @@
     <v-row >
       <v-col align="center">
         <h1 class="mb-4">Last contracts</h1>
+        <p>I want to share my experience from last recent contracts.</p>
       </v-col>
     </v-row>
     <v-row dense>
       <v-timeline align-top :dense="$vuetify.breakpoint.mobile">
         <v-timeline-item
-            color="pink"
+            color="primary"
             small
             v-for="job in jobs"
             :key="job.company"
@@ -19,7 +20,7 @@
               </h3>
               <div class="subtitle-2"><strong>{{ job.span }}</strong></div>
               <div class="caption">
-                {{ job.content }}
+                <p>{{ job.content }}</p>
               </div>
             </v-col>
           </v-row>
@@ -71,4 +72,6 @@ export default {
     ]
   })
 }
+
 </script>
+

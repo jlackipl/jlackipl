@@ -27,7 +27,7 @@ export default {
   components: {Skills, Story, Experience, SiteHeader},
   data: () => ({}),
   metaInfo: {
-    title: "jlacki.pl - software engineer"
+    title: "Jakub Łącki - software engineer"
   }
 };
 </script>
@@ -36,4 +36,9 @@ export default {
 .single-screen {
   min-height: 100vh;
 }
+
+div > p {
+  text-align: justify;
+}
+
 </style>
